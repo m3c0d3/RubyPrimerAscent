@@ -34,11 +34,6 @@ def foo3
 end
 
 foo3
-
-require 'benchmark'
-def calculation_withx                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           _explicit_block_passing(a,b,operation)
-  operation.call(a,b)
-end
 # my solution :))
 def prettify_it_mine
   result = yield
@@ -49,3 +44,6 @@ end
 def prettify_it
   "The result of the block was: #{yield}"
 end
+
+
+
