@@ -16,7 +16,7 @@ def compute(ary)
 end
 
 # vs
-def compute2(ary)
+def compute_solution(ary)
   return nil unless ary
   ary.map { |(a, b)| !b.nil? ? a + b : a }
 end
@@ -30,5 +30,18 @@ def median(*list)
     sorted[list.length/2]
   else
     (sorted[list.length/2-1]+sorted[list.length/2])/2.0
+  end
+end
+
+def median_solution(*list)
+  return nil if list.empty?
+  
+  mid = list.length / 2
+  slist = list.sort
+  
+  if slist.length.odd?
+    slist[mid]
+  else
+    (slist[mid - 1] + slist[mid]).to_f / 2.0
   end
 end
