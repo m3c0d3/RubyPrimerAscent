@@ -43,3 +43,47 @@ class Stack
     @top == -1
   end
 end
+
+
+class Queue
+  def initialize(size)
+    @store = Array.new(size)
+    @size = size
+    @head = -1
+    @tail = 0  
+  end
+  
+  def dequeue
+    #p self
+    if empty?
+      nil
+    else
+      @head = @head.pred
+      @store.delete_at(@head.succ)
+    end
+  end
+  
+  def enqueue(element)
+    if full? or element.nil?
+      nil
+    else
+      @head = @head.succ
+      @store.unshift(element)
+      self
+    end
+  end
+  
+  def size
+    @size
+  end
+  
+  private
+  
+  def full?
+    @size == @head.succ
+  end
+  
+  def empty?
+    @head == -1
+  end
+end
