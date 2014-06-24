@@ -12,3 +12,7 @@ def decode(jumble)
   announce(secret)
   secret
 end
+
+def decode_all2(ary) 
+  ary.each {|s| decode(s) } rescue "it's okay, little buddy." 
+end
