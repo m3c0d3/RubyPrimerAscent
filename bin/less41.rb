@@ -9,3 +9,22 @@ class Bar
     self.extend Foo
   end
 end
+
+
+############### no 2
+module Foo
+  def self.included(base)
+    base.extend ClassMethods
+  end
+  module ClassMethods
+    def guitar
+      "gently weeps"
+    end
+  end
+end
+
+class Bar
+  include Foo
+end
+
+puts Bar.guitar
