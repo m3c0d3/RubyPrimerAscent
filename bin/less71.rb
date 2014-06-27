@@ -9,3 +9,18 @@ def occurrences(str)
     acc
   end
 end
+
+
+class Island
+  def initialize(candidates)
+    @ary = candidates
+  end
+  
+  def survive?
+    @ary.none?{ |e| e=='Esau'}
+  end
+  
+  def safe?
+    @ary.all?{ |e| e=='Jack'}
+  end
+end
