@@ -5,7 +5,7 @@ class Object
     parent = self.superclass  
     while not parent.nil? do
     	result<<parent
-    	parent = parent.superclass
+    	parent=parent.superclass
     end
     result
   end
@@ -24,12 +24,6 @@ class Object
     return [] if klass.nil?
     [klass] + superclasses(klass.superclass)
   end
-end
-
-class Bar
-end
-
-class Foo < Bar
 end
 
 p Foo.superclasses  # should be [Bar, Object, BasicObject]
